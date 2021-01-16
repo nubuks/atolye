@@ -1,0 +1,23 @@
+{
+  "editor.formatOnSave": true,
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "tslint.enable": false,
+  "eslint.enable": true,
+  "eslint.validate": [
+    "javascript",
+    {
+      "language": "typescript",
+      "autoFix": true
+    }
+  ],
+  "atlascode.jira.workingSite": {
+    "baseUrlSuffix": "atlassian.net"
+  },
+  "atlascode.jira.workingProject": {
+    "id": "10074",
+    "name": "Heinrich-Schmid",
+    "key": "HS"
+  },
+  "debug.node.autoAttach": "on",
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

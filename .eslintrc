@@ -1,0 +1,30 @@
+{
+  "extends": "@atolye15/eslint-config-base-typescript",
+  "rules": {
+    "class-methods-use-this": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "src/**/*.spec.ts",
+          "src/__mocks__/**/*.ts",
+          "test/**/*.e2e-spec.ts"
+        ]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "src/migrations/*.ts",
+        "src/**/*.spec.ts",
+        "src/__mocks__/**/*.ts",
+        "test/**/*.e2e-spec.ts"
+      ],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off"
+      }
+    }
+  ]
+}
