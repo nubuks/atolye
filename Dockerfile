@@ -21,4 +21,4 @@ RUN \
 EXPOSE 3000
 RUN \
 	cd /usr/src/app
-CMD [ "yarn start" ]
+CMD [ "yarn start:prod" ]
