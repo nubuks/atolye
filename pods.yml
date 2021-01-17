@@ -10,3 +10,5 @@ spec:
       image: yakmandocker/nodeapp:tagVersion
       ports:
         - containerPort: 3000
+  imagePullSecrets:
+    - nodesecret
