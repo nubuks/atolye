@@ -19,4 +19,5 @@ RUN \
 	cd /usr/src/app && yarn install && yarn lint && yarn format:check && yarn test && yarn test:cov && yarn test:e2e
 
 EXPOSE 3000
+RUN ["chmod", "+x", "start.sh"]
 CMD [ "/start.sh" ]
