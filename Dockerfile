@@ -12,7 +12,6 @@ RUN \
 	apt update && apt install -y wget git build-essential make nodejs yarn automake cmake libpcre3 npm libpcre3-dev re2c zlib1g-dev apt-transport-https ca-certificates
 
 COPY package.json yarn.lock ./
-COPY start.sh /
 COPY . .
 
 RUN \
