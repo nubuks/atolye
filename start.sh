@@ -3,4 +3,4 @@ set -eo pipefail
 shopt -s nullglob
 
 cd /usr/src/app
-exec yarn start
+exec yarn start:prod

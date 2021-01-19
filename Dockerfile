@@ -1,7 +1,5 @@
 FROM debian:buster
 
-MAINTAINER TSOFT <yilmaz.akman@tsoft.com.tr>
-
 WORKDIR /usr/src/app
 
 RUN \
@@ -17,8 +15,10 @@ COPY package.json yarn.lock ./
 COPY start.sh /
 COPY . .
 
+
 RUN \
-cd /usr/src/app && yarn install && yarn lint && yarn format:check && yarn test && yarn test:cov && yarn test:e2e
+cd /usr/src/app && yarn install && yarn lint && yarn format:check && yarn test && yarn test:cov && yarn test:e2e \
+&& chmod 0777 /start.sh
 
 EXPOSE 3000
 CMD [ "/start.sh" ]
